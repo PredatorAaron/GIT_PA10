@@ -5,7 +5,14 @@ using UnityEngine;
 //This script manages the behavior of individual obstacle
 public class Obstacle : MonoBehaviour
 {
+    public static Obstacle thisObstacle;
+
     [SerializeField] private float Speed = 3;
+
+    void Start()
+    {
+        thisObstacle = this;
+    }
 
     void Update()
     {
